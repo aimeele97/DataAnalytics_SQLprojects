@@ -36,18 +36,6 @@ The analysis focused on ten key business questions, including:
 9. What are the top three bikes sold in each product category?
 10. How does customer segmentation (based on RFM analysis) impact overall sales performance?
 
-## Key Findings
-- 2017 was the best-selling year, but there has been a decline since then, with a notable drop in sales starting in June 2018.
-- New York contributed about 65% of total revenue. Targeted marketing efforts should focus on this state.
-- Cruisers accounted for 29% of total sales, with Electra being the top brand.
-- 44% of customers were regulars, highlighting opportunities for enhanced loyalty programs.
-
-## Recommendations
-
-- Since New York is the largest market and a major revenue contributor, it’s crucial to enhance our presence there. Strategies should include targeted marketing campaigns, improving customer engagement, and forming partnerships with local businesses to boost sales.
-- Consider promotional campaigns specifically for cruisers to capitalize on this strong market segment.
-- Strengthen customer retention through enhanced loyalty programs that reward frequent purchases and engagement.
-
 ## Sample SQL Queries Used in the Analysis
 
 __What were the total orders, quantity sold, and revenue generated each year?__
@@ -130,6 +118,3 @@ FROM tbl_tier
 GROUP BY rfm_score;
 ```
 
-## Conclusion
-
-The company should focus on key strategies base on the analysis to drive growth. Target New York market, which generates 65% of revenue, to maximize marketing impact. Promote cruisers, particularly the Electra brand, to boost sales. Enhance loyalty programs for the 44% of regular customers to improve retention. These actions will strengthen the company’s market position.
