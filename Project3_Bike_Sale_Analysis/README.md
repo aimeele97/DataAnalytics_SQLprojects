@@ -6,11 +6,9 @@ __Problem Statement__:
 In the competitive retail sector, making data-driven decisions is essential. This analysis focuses on sales trends at a bicycle store from 2016 to 2018 by identifying business problems and offering actionable insights into sales data to facilitate effective decision-making and foster growth.
 
 ## Objectives of the Analysis
-
-- **Sales Analysis**: Examine annual and monthly sales figures, including cumulative sales and growth rates.
-- **Revenue Insights**: Identify patterns and contributions from different states, peak sales months, and ordering trends throughout the week.
+- **Revenue Insights**: Analyze overall revenue trends, key growth drivers, and top-performing sales channels.
 - **Product Performance**: Evaluate how different categories, brands, and individual products performed.
-- **Customer Segmentation**: Implement RFM (Recency, Frequency, Monetary) analysis to better understand customer behavior.
+- **Customer Segmentation**: Identifying your most valuable customers, analyzing their behavior, and tailoring your approach to engage them more effectively, ultimately boosting customer engagement, retention, and profitability.
 
 ## The steps
 
