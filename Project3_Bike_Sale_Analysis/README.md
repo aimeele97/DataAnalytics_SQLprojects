@@ -2,7 +2,7 @@
 
 ![Bike Store Logo](https://github.com/Aimee-Le/BikeStoreAnalysis/blob/main/logomain.png)
 
-__Problem Statement__:
+__Problem Statement__:  
 In the competitive retail landscape, data-driven insights are crucial for strategic growth. This analysis explores sales data from a bicycle store between 2016 and 2018, focusing on three key areas: product performance, sales trends, and customer segmentation. By evaluating how different product categories and brands performed, identifying revenue patterns over time, and segmenting customers using RFM analysis, the goal is to uncover actionable insights that drive improved sales, targeted marketing, and smarter business decisions.
 
 ## Objectives of the Analysis
