@@ -1,9 +1,9 @@
-# Analyzing Bike Store Revenue - Sales trends analysis
+# Analyzing Sale analysis - Bike Store
 
 ![Bike Store Logo](https://github.com/Aimee-Le/BikeStoreAnalysis/blob/main/logomain.png)
 
 __Problem Statement__:
-In the competitive retail sector, making data-driven decisions is essential. This analysis focuses on sales trends at a bicycle store from 2016 to 2018 by identifying business problems and offering actionable insights into sales data to facilitate effective decision-making and foster growth.
+In the competitive retail landscape, data-driven insights are crucial for strategic growth. This analysis explores sales data from a bicycle store between 2016 and 2018, focusing on three key areas: product performance, sales trends, and customer segmentation. By evaluating how different product categories and brands performed, identifying revenue patterns over time, and segmenting customers using RFM analysis, the goal is to uncover actionable insights that drive improved sales, targeted marketing, and smarter business decisions.
 
 ## Objectives of the Analysis
 - **Revenue Insights**: Analyze overall revenue trends, key growth drivers, and top-performing sales channels.
@@ -13,7 +13,7 @@ In the competitive retail sector, making data-driven decisions is essential. Thi
 ## The steps
 
 - Data collection: Downloading and importing relevant CSV files into a database using Azure Data Studio.
-- Define key questions: Identify business challenges, and formulate key analytical questions to guide the analysis.
+- Define and answer business questions: Identify business challenges, and formulate key analytical questions to guide the analysis.
 - Data cleaning: Ensuring accuracy by correcting data types, handling null values, and removing irrelevant columns.
 - Data Analysis: Answering business questions, provide the key insights. Also focusing on optimizing SQL queries performance.
 
