@@ -1,16 +1,7 @@
--- NOTE: 
--- Try to use both Subquery & With to solve these questions
--- Step by step. Thinking about the way & flow of doing before coding. 
--- Try to break down the big question into small ones then join them together at the end.
--- Using Superstore database
-
 -- 1. Return the list of all unique products in each Sub-Category that have
 -- - Product ID, Product Sub category, Product Price
--- 	Product price = sales/quantity 
 -- - Avg sub-category product price using unique product prices from above results in each sub-category (Not sales)
 -- - A column saying that if product price is greater or less than AVG Sub-category price 
--- * Note: Check discounts because they affect the Sales values. We need the original Sales Price. Use Round() function if needed
--- Example outcome
 
 use superstore;
 
@@ -37,7 +28,7 @@ from price_unique un
 left join avg_price av
 on un.Sub_Category = av.Sub_Category;
 
--- 2. Using Orders table. Return the list of all unique customer in each region that have
+-- 2. Using Orders table. Return the list of all unique customer that have
 -- - Segment, Customer ID, Customer Name, Total Orders, Total Technology Sales, Total Office Supply Sales, Total Furniture Sales, Total Sales
 -- - AVG Number Orders per customer, and AVG Total Sales per Customer in each region
 -- - Max & Min Total Number Orders per customer
@@ -45,10 +36,7 @@ on un.Sub_Category = av.Sub_Category;
 -- - only keep customers that have either ONE of these condition
 -- 	+ Total Number Orders = Min/Max Total Number Orders per customer in each region
 -- 	+ Total Sales within the range of +/- 10% of AVG Total Sales per Customer in each region  
--- * Guide:
--- We would need to aggregate per region and per customer first
--- Use Where to filter data
--- Final result would be just a list of Customers with a bunch of other columns. One customer, one row.
+
 
 use superstore;
 with customer_details as (
@@ -100,9 +88,6 @@ on c.segment = s.segment
 where (total_orders = min_order or total_orders = max_order) or (total_sale between avg_sale*0.9 and avg_sale * 1.1);
 
 -- Using Classicmodel database
--- Spend some time to understand each table first and find the connections between them.
--- Drawing a connection diagram similar to a Bookshop Diagram would be helpful. This one is called ERD (Entity Relationship Diagram)
-
 -- 3. Get list of all customers with following information 
 -- - Sales Rep details + Sales Manager details
 -- - Office Details
