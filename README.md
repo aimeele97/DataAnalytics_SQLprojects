@@ -1,6 +1,8 @@
 # 📊 DataAnalytics\_SQLprojects
 
-This repository showcases a collection of SQL-based data analytics projects aimed at extracting insights and supporting business decision-making. Each project addresses practical business questions using structured queries, data modeling, and SQL best practices. Together, these projects demonstrate my ability to solve real-world problems through clean, efficient SQL logic — highlighting both my technical expertise and business-oriented thinking.  
+This repository showcases a collection of SQL-based data analytics projects aimed at extracting insights and supporting business decision-making. Each project addresses practical business questions using structured queries, data modeling, and SQL best practices.  
+
+Together, these projects demonstrate my ability to solve real-world problems through clean, efficient SQL logic — highlighting both my technical expertise and business-oriented thinking.  
 
 ---
 
