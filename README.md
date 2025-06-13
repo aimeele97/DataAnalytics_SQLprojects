@@ -1,6 +1,6 @@
 # 📊 DataAnalytics\_SQLprojects
 
-This repository showcases a series of SQL-based data analytics projects designed to extract insights and support business decisions. Each project focuses on answering practical business questions using structured queries, data modeling techniques, and SQL best practices.
+This repository showcases a collection of SQL-based data analytics projects aimed at extracting insights and supporting business decision-making. Each project addresses practical business questions using structured queries, data modeling, and SQL best practices. Together, these projects demonstrate my ability to solve real-world problems through clean, efficient SQL logic — highlighting both my technical expertise and business-oriented thinking.  
 
 ---
 
@@ -50,10 +50,4 @@ This repository showcases a series of SQL-based data analytics projects designed
 
 * **Languages**: SQL (MySQL, PostgreSQL)
 * **Techniques**: Joins, aggregations, subqueries, window functions, CTEs
-* **Tools**: DBeaver, MySQL Workbench, GitHub
-
----
-
-## 📌 About
-
-These projects demonstrate my ability to solve business problems with structured data, clear logic, and optimized queries. They reflect both technical SQL expertise and an understanding of business context.
+* **Tools**: MySQL Workbench, GitHub
