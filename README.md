@@ -10,7 +10,7 @@ This repository showcases a series of SQL-based data analytics projects designed
 
 **Objective**: Break down broad business questions into smaller, answerable tasks using SQL. Each analysis applies subqueries and CTEs to deliver insights that inform decisions.  
 **Techniques**: Aggregation, CTEs, subqueries  
-🔗 [View](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Answering_Business_Questions)
+🔗 [View Code](https://github.com/aimeele97/DataAnalytics_SQLprojects/blob/main/Answering_Business_Questions/superstore%26classicmodels.sql)
 
 ---
 
@@ -18,7 +18,7 @@ This repository showcases a series of SQL-based data analytics projects designed
 
 **Objective**: Identify top performers and workforce trends using employee KPI data.
 **SQL Concepts Used**: Window functions, aggregations, performance metrics  
-🔗 [View](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Project1_Employee_Key_Performance_Analysis)
+🔗 [View project](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Project1_Employee_Key_Performance_Analysis)
 
 ---
 
@@ -26,7 +26,7 @@ This repository showcases a series of SQL-based data analytics projects designed
 
 **Objective**: Analyze ecommerce transaction data to uncover customer behavior and sales performance.
 **SQL Concepts Used**: Window functions, aggregations, KPI calculations  
-🔗 [View](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Project2_Ecommerce_Sale_Analysis)
+🔗 [View project](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Project2_Ecommerce_Sale_Analysis)
 
 ---
 
@@ -34,7 +34,7 @@ This repository showcases a series of SQL-based data analytics projects designed
 
 **Objective**: Segment customers based on Recency, Frequency, and Monetary value for targeted marketing.
 **SQL Concepts Used**: CTEs, RFM metrics, conditional logic  
-🔗 [View](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Project3_Bike_Sale_Analysis)
+🔗 [View project](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Project3_Bike_Sale_Analysis)
 
 ---
 
@@ -42,7 +42,7 @@ This repository showcases a series of SQL-based data analytics projects designed
 
 **Objective**: Explore property market trends using listing data.
 **SQL Concepts Used**: Grouping, filtering, revenue calculations  
-🔗 [View](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Project4_Real_Estate_Listings)
+🔗 [View project](https://github.com/aimeele97/DataAnalytics_SQLprojects/tree/main/Project4_Real_Estate_Listings)
 
 ---
 
