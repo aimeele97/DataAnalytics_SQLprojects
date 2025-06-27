@@ -1,14 +1,19 @@
+## 🔗 Quick 
+
+- 💬 [LinkedIn Project Post](https://www.linkedin.com/feed/update/urn:li:activity:7339201532086689795/)
+- 📊 [Dashboard on Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/real_estate_dashboard_17476316458810_17490860210760/DashboardKPI)
+- 🧾 [SQL Data Model Code](src/real_estate_data_model.sql)
+- 🧾 [SQL Data Analysis Code](src/Data%20Analysis.sql)
+- 📁 [Raw Dataset CSV](src/raw_tbl.csv)
+
 ## 🏘️ Real Estate Listings Project (1 Month Data)
 
 This project dives into real-world property listings, taking raw, messy data and transforming it into structured insights using SQL and Tableau. More than just a technical exercise, it's a reflection of how data — when shaped the right way — can tell powerful stories about markets, people, and places.
 
----
 
 ## 🛠️ Tools & Techniques
 
 **MySQL**, **Tableau**, **Data Analysis**, **Data Modeling**, **Data Visualization**
-
----
 
 ## 📥 Data Collection & Overview
 
@@ -27,7 +32,6 @@ Raw data overview
 
 ![alt text](img/image-14.png)
 
----
 
 ## 🧱 Data Modeling Approach
 
@@ -41,8 +45,6 @@ This structure follows best practices for scalable, reliable analytics.
 ![alt text](img/image-15.png)
 
 [SQL quote can be found here](./real_estate_data_model.sql)
-
----
 
 ## 🔍 SQL-Based Data Exploration
 
@@ -65,12 +67,11 @@ Insights explored:
 * Listings with price changes over time
 
 Example SQL syntax:
+
 ![alt text](img/image-5.png)
 
+-[SQL code can be found here](src/real_estate_data_model.sql)
 
-[SQL code can be found here](src/real_estate_data_model.sql)
-
----
 
 ## 📊 Dashboard Highlights
 
@@ -83,8 +84,6 @@ Using Tableau, I created a dashboard with 3 interactive tabs:
 🔗 [View on LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:7339201532086689795/)
 
 🔗 [View on Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/real_estate_dashboard_17476316458810_17490860210760/DashboardKPI)
-
----
 
 ## 📌 Key Insights
 
@@ -114,8 +113,6 @@ Most listings had **1–2 inspections**, peaking on weekends. One standout prope
 ### 🔨 Private Treaty Over Auctions
 
 Only **8%** of inspections were linked to auctions — confirming **private treaty** as the dominant method in this market.
-
----
 
 ## 🚀 Final Thoughts
 
