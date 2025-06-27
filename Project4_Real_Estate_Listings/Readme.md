@@ -68,9 +68,28 @@ Insights explored:
 
 Example SQL syntax:
 
-![alt text](img/image-5.png)
+```sql
+--list of unique listings with price change over time
 
--[SQL code can be found here](src/real_estate_data_model.sql)
+with cte as (
+	select listing_id, agent_id,
+        count(distinct listing_price_view) time_price_change
+	from real_estate.fact_daily_listing
+	group by listing_id, agent_id
+    having count(distinct listing_price_view) > 1 
+)
+select cte.listing_id,f.agent_id, 
+    f.first_go_live, f.last_price_change,
+    f.listing_price_view
+from real_estate.fact_daily_listing f 
+join cte
+    n cte.listing_id = f.listing_id
+group by cte.listing_id,f.agent_id, f.first_go_live, f.last_price_change, f.listing_price_view
+order by cte.listing_id, first_go_live;
+```
+
+
+[SQL code can be found here](src/Data%20Analysis.sql)
 
 
 ## 📊 Dashboard Highlights

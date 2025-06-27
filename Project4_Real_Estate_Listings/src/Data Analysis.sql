@@ -1,21 +1,3 @@
-# total properties, avg posted listings per day, total new listing
-select 
-    count(f.listing_id) as total_daily_listings_records,
-    count(distinct f.listing_id) as total_unique_listings,
-    round(
-        count(distinct concat(f.snapshot_date, f.listing_id)) 
-        / count(distinct date(f.snapshot_date))
-    ) as avg_listing_per_day,
-    count(distinct case 
-        when date(f.first_go_live) between 
-             (select min(snapshot_date) from real_estate.fact_daily_listing) and 
-             (select max(snapshot_date) from real_estate.fact_daily_listing)
-        then f.listing_id 
-    end) as new_listings_live_within_snapshot_range,
-    count(distinct agent_id) as number_agents,
-    count(distinct snapshot_date) number_snapshop_day
-from real_estate.fact_daily_listing f;
-
 # number of sold listings
 
 select count( distinct listing_id) number_sold
@@ -45,16 +27,33 @@ order by listing_price) temp
 where
    rowasc IN (rowdesc, rowdesc - 1, rowdesc + 1);
 
+# total properties, avg posted listings per day, total new listing
+select 
+    count(f.listing_id) as total_daily_listings_records,
+    count(distinct f.listing_id) as total_unique_listings,
+    round(
+        count(distinct concat(f.snapshot_date, f.listing_id)) 
+        / count(distinct date(f.snapshot_date))
+    ) as avg_listing_per_day,
+    count(distinct case when date(f.first_go_live) between 
+             (select min(snapshot_date) from real_estate.fact_daily_listing) and 
+             (select max(snapshot_date) from real_estate.fact_daily_listing)
+             then f.listing_id end) as new_listings_live_within_snapshot_range,
+    count(distinct agent_id) as number_agents,
+    count(distinct snapshot_date) number_snapshop_day
+from real_estate.fact_daily_listing f;
+
 # number of inspections of property before sold
 
 with cte as (
-select fac.listing_id, lis.listing_status,
-	count(distinct concat(fac.listing_id,inspection_1_start_time)) as number_inspection
-from real_estate.fact_daily_listing fac
-join real_estate.dim_listing lis
-on fac.listing_id = lis.listing_id
-group by fac.listing_id, lis.listing_status
-having lis.listing_status = 'archived'
+    select fac.listing_id, 
+        lis.listing_status,
+        count(distinct concat(fac.listing_id,inspection_1_start_time)) as number_inspection
+    from real_estate.fact_daily_listing fac
+    join real_estate.dim_listing lis
+        on fac.listing_id = lis.listing_id
+    group by fac.listing_id, lis.listing_status
+    having lis.listing_status = 'archived'
 )
 select number_inspection,
 	count(distinct listing_id) as total_units,
@@ -70,7 +69,7 @@ select fac.listing_id, lis.listing_status,
 	count(distinct concat(fac.listing_id,inspection_1_start_time)) as number_inspection
 from real_estate.fact_daily_listing fac
 join real_estate.dim_listing lis
-on fac.listing_id = lis.listing_id
+    on fac.listing_id = lis.listing_id
 group by fac.listing_id, lis.listing_status
 having lis.listing_status = 'archived'
 )
@@ -130,8 +129,6 @@ group by listing_suburb,
     listing_price
     order by listing_suburb, property_type;
 
--- houses sold fastest 
-
 # number of auctions by status
 
 select auction_status,
@@ -142,26 +139,30 @@ group by auction_status;
 
 # number of time that listing change price
 
-select distinct time_price_change, count(distinct listing_id) number_unique_listings
+select distinct time_price_change, 
+    count(distinct listing_id) number_unique_listings
 from (
-select listing_id, count(distinct last_price_change) time_price_change
-from real_estate.fact_daily_listing
-group by listing_id) temp
+    select listing_id, count(distinct last_price_change) time_price_change
+    from real_estate.fact_daily_listing
+    group by listing_id) temp
 group by time_price_change
 order by time_price_change;
 
 # list of unique listings with price change over time
 
 with cte as (
-	select listing_id, agent_id,count(distinct listing_price_view) time_price_change
+	select listing_id, agent_id,
+        count(distinct listing_price_view) time_price_change
 	from real_estate.fact_daily_listing
 	group by listing_id, agent_id
     having count(distinct listing_price_view) > 1 
 )
-select cte.listing_id,f.agent_id, f.first_go_live, f.last_price_change ,f.listing_price_view
+select cte.listing_id,f.agent_id, 
+    f.first_go_live, f.last_price_change,
+    f.listing_price_view
 from real_estate.fact_daily_listing f 
 join cte
-on cte.listing_id = f.listing_id
+    n cte.listing_id = f.listing_id
 group by cte.listing_id,f.agent_id, f.first_go_live, f.last_price_change, f.listing_price_view
 order by cte.listing_id, first_go_live;
 
