@@ -16,7 +16,7 @@ This project dives into real-world property listings, taking raw, messy data and
 * Transformed it into clean, analysis-ready models using SQL
 * Built for real-world data training and practice
 
-[Raw data can be found here](./raw_tbl.csv)
+[Raw data can be found here](src/raw_tbl.csv)
 
 The dataset includes: **71 columns** and **10,682 records**
 
@@ -38,7 +38,7 @@ I created SQL queries to split the data into:
 
 This structure follows best practices for scalable, reliable analytics.
 
-![alt text]![alt text](img/image-15.png)
+![alt text](img/image-15.png)
 
 [SQL quote can be found here](./real_estate_data_model.sql)
 
@@ -68,7 +68,7 @@ Example SQL syntax:
 ![alt text](img/image-5.png)
 
 
-[SQL code can be found here](./propertylistingsEDA.sql)
+[SQL code can be found here](src/real_estate_data_model.sql)
 
 ---
 
@@ -80,7 +80,7 @@ Using Tableau, I created a dashboard with 3 interactive tabs:
 2. **Property Insights** – Price comparisons by location and hotspot areas
 3. **Auction & Inspection** – Calendar view of market activity
 
-🔗 [LinkedIn dashboard post](https://www.linkedin.com/feed/update/urn:li:activity:7339201532086689795/)
+🔗 [View on LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:7339201532086689795/)
 
 🔗 [View on Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/real_estate_dashboard_17476316458810_17490860210760/DashboardKPI)
 
