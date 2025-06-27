@@ -125,4 +125,4 @@ From modeling to visualization, every step helped sharpen my ability to think li
 
 If you're curious to dive deeper, feel free to explore the SQL code, check out the dashboard, or connect with me.
 
-📬 [Let’s connect on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7339201532086689795/)
+📬 [Let’s connect on LinkedIn](https://www.linkedin.com/in/aimeele97/)
