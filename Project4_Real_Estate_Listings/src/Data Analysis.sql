@@ -162,7 +162,7 @@ select cte.listing_id,f.agent_id,
     f.listing_price_view
 from real_estate.fact_daily_listing f 
 join cte
-    n cte.listing_id = f.listing_id
+    on cte.listing_id = f.listing_id
 group by cte.listing_id,f.agent_id, f.first_go_live, f.last_price_change, f.listing_price_view
 order by cte.listing_id, first_go_live;
 
