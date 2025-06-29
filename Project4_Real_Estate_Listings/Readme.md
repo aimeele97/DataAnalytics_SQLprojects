@@ -50,8 +50,8 @@ This structure follows best practices for scalable, reliable analytics.
 
 Once modeled, I used SQL to dive deep into the data using:
 
-* `SELECT`, `FROM`, `WHERE`, `GROUP BY`, `HAVING`
-* `LEFT JOIN`, subqueries, window functions, basic calculations
+* `SELECT`, `FROM`, `JOIN`,`WHERE`, `GROUP BY`, `HAVING`
+* Subqueries, CTE, window functions, basic calculations
 
 Insights explored:
 
@@ -78,13 +78,16 @@ with cte as (
 	group by listing_id, agent_id
     having count(distinct listing_price_view) > 1 
 )
-select cte.listing_id,f.agent_id, 
-    f.first_go_live, f.last_price_change,
+select cte.listing_id,
+    f.agent_id, 
+    f.first_go_live, 
+    f.last_price_change,
     f.listing_price_view
 from real_estate.fact_daily_listing f 
 join cte
     on cte.listing_id = f.listing_id
-group by cte.listing_id,f.agent_id, f.first_go_live, f.last_price_change, f.listing_price_view
+group by cte.listing_id,f.agent_id, f.first_go_live, 
+    f.last_price_change, f.listing_price_view
 order by cte.listing_id, first_go_live;
 ```
 
