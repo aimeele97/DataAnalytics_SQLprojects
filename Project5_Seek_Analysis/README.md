@@ -11,7 +11,7 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 * **Locations**: 543 across Australia
 * **Keyword**: “data analyst”
 
-<img src="image-1.png" alt="Job Summary" width="500" />
+<img src="./img/image-1.png" alt="Job Summary" width="500" />
 
 ---
 
@@ -20,7 +20,7 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 * **Avg. analyst job postings/day**: 42
 * **All job types total**: 2,829
 
-<img src="image-17.png" alt="Daily Volume" width="400"/>
+<img src="./img/image-17.png" alt="Daily Volume" width="400"/>
 
 ---
 
@@ -29,7 +29,7 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 * Most postings lasted **1–4 days** (3 days most common)
 * Longest listing: **29 days**
 
-<img src="image-18.png" alt="Duration" width="400"/>
+<img src="./img/image-18.png" alt="Duration" width="400"/>
 
 ---
 
@@ -37,7 +37,7 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 * Higher activity during **May–June**
 
-<img src="image-23.png" alt="Weekly Trend" width="400"/>
+<img src="./img/image-23.png" alt="Weekly Trend" width="400"/>
 
 ---
 
@@ -47,7 +47,7 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 * **Senior**: 16.28%
 * **Other**: 81.67%
 
-<img src="image-6.png" alt="Role Breakdown" width="400"/>
+<img src="./img/image-6.png" alt="Role Breakdown" width="400"/>
 
 ---
 
@@ -56,8 +56,8 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 * **70%** of advertisers posted only **1 job**
 * Max from a single advertiser: **26 listings** (0.07%)
 
-<img src="image-8.png" alt="Advertiser Count" width="400"/>  
-<img src="image-9.png" alt="Advertiser Spread" width="400"/>
+<img src="./img/image-8.png" alt="Advertiser Count" width="400"/>  
+<img src="./img/image-9.png" alt="Advertiser Spread" width="400"/>
 
 ---
 
@@ -65,13 +65,13 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 * **7%** of listings were **promoted**
 
-<img src="image-10.png" alt="Promotions" width="400"/>
+<img src="./img/image-10.png" alt="Promotions" width="400"/>
 
 ---
 
 ### 🏢 Top Hiring Companies
 
-<img src="image-11.png" alt="Top Companies" width="400"/>
+<img src="./img/image-11.png" alt="Top Companies" width="400"/>
 
 ---
 
@@ -79,13 +79,13 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 * **NSW + VIC** = over **60%** of all postings
 
-<img src="image-15.png" alt="State Distribution" width="400" height="150"/>  
+<img src="./img/image-15.png" alt="State Distribution" width="400" height="150"/>  
 
-<img src="image-14.png" alt="State Breakdown" width="300" height="150"/>
+<img src="./img/image-14.png" alt="State Breakdown" width="300" height="150"/>
 
 * Top regions exceed their state’s average
 
-<img src="image-16.png" alt="Top Regions" />
+<img src="./img/image-16.png" alt="Top Regions" />
 
 * **NT, TAS, WA** had the lowest numbers
 
@@ -96,19 +96,19 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 * **Avg. new postings/day**: 42
 * **Total new jobs (snapshot period)**: 2,675
 
-<img src="image-19.png" alt="New Jobs Daily" width="300"/>
+<img src="./img/image-19.png" alt="New Jobs Daily" width="300"/>
 
 * **Tuesday** saw the most new postings weekly
 
-<img src="image-20.png" alt="Tuesday Peak" width="350"/>  
+<img src="./img/image-20.png" alt="Tuesday Peak" width="350"/>  
 
-<img src="image-22.png" alt="Day of Week Trends" height="200"/>
+<img src="./img/image-22.png" alt="Day of Week Trends" height="200"/>
 
 ---
 
 ### 🏭 Top Industries Hiring Analysts
 
-<img src="image-24.png" alt="Industries" />
+<img src="./img/image-24.png" alt="Industries" />
 
 Absolutely — based on the insights from your job posting data analysis, here are several actionable **recommendations** tailored to job seekers, recruiters, and analysts studying the market:
 
