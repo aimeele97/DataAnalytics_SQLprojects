@@ -37,8 +37,8 @@ Raw data overview
 
 I created SQL queries to split the data into:
 
-* **Fact tables** — transactional data that changes over time (e.g. listings)
-* **Dimension tables** — descriptive fields that add context (e.g. agents, suburbs)
+* **Fact table** — transactional data that changes over time (e.g. daily_snapshot)
+* **Dimension tables** — descriptive fields that add context (e.g. agent_detail, office_detail)
 
 This structure follows best practices for scalable, reliable analytics.
 
