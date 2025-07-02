@@ -21,7 +21,9 @@ This project explores job posting trends for **Data Analyst** roles in Australia
 - **Tuesdays** are the best day to apply or post
 - Very few roles are mentioned level in the job title, around 95% of unspecified which level tare hiring
 
-![Demo](./img/seek%20record.gif)
+  ![Demo](./img/seek%20record.gif)
+
+Link to Dashboard: [Tableau](https://public.tableau.com/app/profile/tien.le2550/viz/Book1_17460849868290_17513811269990/Dashboardoverview)  
 
 ---
 
@@ -31,23 +33,80 @@ This project explores job posting trends for **Data Analyst** roles in Australia
 |-------|------------|--------------|----------------------------------|-------------|
 | 1     | SEEK Jobs  | Web scraping | Data Analyst job listings (AU)   | CSV         |
 
+
+Column defination:
+| Column Name                   | Description                                             |
+| ----------------------------- | ------------------------------------------------------- |
+| `snapshot_date`               | Date when the data snapshot was taken                   |
+| `page`                        | Page number on which the job listing was found          |
+| `job_id`                      | Unique identifier for the job listing                   |
+| `job_title`                   | Title of the job                                        |
+| `job_subtitle`                | Subtitle or secondary job description                   |
+| `advertiser_id`               | Unique identifier for the advertiser/employer           |
+| `advertiser_name`             | Name of the advertiser/employer                         |
+| `listing_date`                | Date the job was listed                                 |
+| `posted_ago`                  | Time since the job was posted (e.g., "3 days ago")      |
+| `promoted_flag`               | Indicator if the job was marked as promoted             |
+| `is_promoted`                 | Boolean flag for promotion status                       |
+| `job_teaser`                  | Teaser or brief job description                         |
+| `job_classification_slug`     | URL-friendly string representing the job classification |
+| `job_processing_code`         | Internal processing code for the job                    |
+| `advertiser_logo_url`         | URL to the advertiser’s logo                            |
+| `job_type`                    | Type of job (e.g., Full-time, Part-time)                |
+| `work_location_type`          | Location type (e.g., Remote, On-site)                   |
+| `job_salary`                  | Salary information (likely free-text)                   |
+| `job_benefits`                | Listed benefits of the job                              |
+| `job_highlight_1`             | Key highlight or selling point #1                       |
+| `job_highlight_2`             | Key highlight or selling point #2                       |
+| `primary_classification_id`   | ID for the main job classification                      |
+| `primary_classification_name` | Name of the main job classification                     |
+| `subclassification_id`        | ID of the job subclassification                         |
+| `subclassification_name`      | Name of the job subclassification                       |
+| `location_name`               | Name of the job location                                |
+| `country_code`                | Country code (e.g., AU, NZ)                             |
+| `location_postcode`           | Postal code of the job location                         |
+| `location_region`             | Region or state of the job                              |
+| `job_guid`                    | Global Unique Identifier for the job                    |
+| `job_url_suffix`              | URL suffix to the job details page                      |
+| `job_listing_type`            | Type of listing (e.g., organic, paid)                   |
+| `listing_source`              | Source platform or method used to gather the listing    |
+| `industry_id`                 | ID of the industry                                      |
+| `scraper_user`                | User or process that scraped the job data               |
+| `is_expired_flag`             | Boolean flag indicating if the job listing is expired   |
+
 ---
 
 ### ⚙️ Getting the Data
 
 #### Step 1: Data Cleaning
+- Uploaded cleaned CSV to **Snowflake**
 - Checked and removed duplicate record
+- Rename the column
 
 #### Step 2: Data Modeling
-- Uploaded cleaned CSV to **Snowflake**
-- Used SQL to rename, filter, and model the data
+- Used SQL to create fact and dimension table to model the data
+
+Source code example:
+```sql
+  -- ========== 1. DIM_ADVERTISER ==========
+  CREATE OR REPLACE TABLE SEEK_DATA.PUBLIC.DIM_ADVERTISER (
+      advertiser_id STRING PRIMARY KEY,
+      advertiser_name STRING,
+      advertiser_logo_url	STRING
+  );
+
+  INSERT INTO SEEK_DATA.PUBLIC.DIM_ADVERTISER (advertiser_id, 
+       advertiser_name, advertiser_logo_url)
+  SELECT DISTINCT advertiser_id, advertiser_name, advertiser_logo_url
+  FROM SEEK_DATA.PUBLIC.SEEK_RAW_DATA
+  WHERE advertiser_id IS NOT NULL;
+```
 
 ---
 
 ## 📚 Assumptions
 
 - Data was scraped from **only 10 pages per run**, so not all postings were captured during the period.
-- Duplicates and expired jobs may not be fully excluded.
 - Role levels are classified based on title keyword matches.
 
 ---
@@ -154,7 +213,8 @@ This project explores job posting trends for **Data Analyst** roles in Australia
 
 ## 📌 Recommendations Based on Insights
 
-### 1. 🕒 Post Jobs Early in the Week  
+Hiring Copany 
+### 1. Post Jobs Early in the Week  
 Tuesdays see the most new postings — both recruiters and job seekers should act accordingly.
 
 ### 2. ⚠️ Optimize for Short Lifespan  
@@ -176,14 +236,6 @@ Some companies hire at higher volumes — great targets for job seekers.
 Only 7% of jobs are promoted, so standing out is possible with boosted visibility.
 
 ---
-
-## ❤️ Acknowledgements
-
-Thanks to:
-- **SEEK** for providing publicly available job postings.
-- **Snowflake** for cloud data warehousing.
-- **Tableau** for interactive visualizations.
-
 
 ## ⚠️ Disclaimer
 
