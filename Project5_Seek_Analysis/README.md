@@ -2,7 +2,8 @@
 
 > **Tools:** Snowflake, SQL, Tableau  
 > **Techniques:** Data Analysis, Data Modeling, Data Visualization  
-> **Data Period:** 25 April – 26 June 2025
+> **Source code:** [`SQL modeling`](data_modeling.sql), [`SQL analysis`](data_analysis.sql)  
+> **Dashboard:** [Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/Book1_17460849868290_17513811269990/Dashboardoverview) 
 
 ---
 
@@ -21,9 +22,7 @@ This project explores job posting trends for **Data Analyst** roles in Australia
 - **Tuesdays** are the best day to apply or post
 - Very few roles are mentioned level in the job title, around 95% of unspecified which level tare hiring
 
-  ![Demo](./img/seek%20record.gif)
-
-Link to Dashboard: [Tableau](https://public.tableau.com/app/profile/tien.le2550/viz/Book1_17460849868290_17513811269990/Dashboardoverview)  
+  ![Demo](./img/seek%20record.gif) 
 
 ---
 
@@ -31,7 +30,7 @@ Link to Dashboard: [Tableau](https://public.tableau.com/app/profile/tien.le2550/
 
 | Index | Name       | Source       | Summary                         | Data Format |
 |-------|------------|--------------|----------------------------------|-------------|
-| 1     | SEEK Jobs  | Web scraping | Data Analyst job listings (AU)   | CSV         |
+| 1     | seek raw data  | Seek.com.au | Web scraping - Data Analyst job listings (AU)   | CSV         |
 
 
 Column definition:
