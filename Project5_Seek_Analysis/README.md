@@ -1,24 +1,73 @@
-## Data Analyst Job Postings in Australia (25 April – 26 June)
+# 📊 Data Analyst Job Postings in Australia (25 April – 26 June)
 
-This project analyzes **Data Analyst** job listings across Australia over a two-month period (25 April – 26 June). Scraping was performed every 3 days (10 pages each time).
+> **Tools:** Snowflake, SQL, Tableau  
+> **Techniques:** Data Analysis, Data Modeling, Data Visualization  
+> **Data Period:** 25 April – 26 June 2025
 
 ---
 
-### 📊 Summary
+## 🎯 1. Quick Overview of Findings
 
-* **Total postings**: 8,140
-* **Unique companies**: 2,051
-* **Locations**: 543 across Australia
+This project explores job posting trends for **Data Analyst** roles in Australia over a two-month period. Using data scraped from SEEK, we processed, modeled, and visualized insights to understand demand, timing, location patterns, and hiring behavior.
+
+> **Project Name:** Data Analyst Job Trends Australia  
+> **Data Sources:** [`seek_raw_data.csv`](seek_data_snowflake_no_header.csv)  
+> **Tools Used:** Python, SQL, Tableau, Excel  
+
+### 🔍 Key Findings:
+- **Information & communication technology** is the top industry hiring analysts
+- **NSW & VIC** dominate analyst job opportunities
+- **Most jobs** remain live for only **1 to 4 days**
+- **Tuesdays** are the best day to apply or post
+- Very few roles are mentioned level in the job title, around 95% of unspecified which level tare hiring
+
+![Demo](./img/seek%20record.gif)
+
+---
+
+## 🌐 2. Sources of Data
+
+| Index | Name       | Source       | Summary                         | Data Format |
+|-------|------------|--------------|----------------------------------|-------------|
+| 1     | SEEK Jobs  | Web scraping | Data Analyst job listings (AU)   | CSV         |
+
+---
+
+### ⚙️ Getting the Data
+
+#### Step 1: Data Cleaning
+- Checked and removed duplicate record
+
+#### Step 2: Data Modeling
+- Uploaded cleaned CSV to **Snowflake**
+- Used SQL to rename, filter, and model the data
+
+---
+
+## 📚 Assumptions
+
+- Data was scraped from **only 10 pages per run**, so not all postings were captured during the period.
+- Duplicates and expired jobs may not be fully excluded.
+- Role levels are classified based on title keyword matches.
+
+---
+
+## 📊 Summary Visuals & Insights
+
+### 📌 General Summary
+* **Total postings**: 8,140  
+* **Unique companies**: 2,051  
+* **Locations**: 543 across Australia  
 * **Keyword**: “data analyst”
 
 <img src="./img/image-1.png" alt="Job Summary" width="500" />
 
 ---
 
-### 📈 Job Volume that actually has the 'analyst' mention in the title
+### 📈 Analyst-Specific Job Titles
 
-* **Avg. analyst job postings/day**: 42
-* **All job types total**: 2,829
+* **Avg. analyst job postings/day**: 42  
+* **Total analyst-specific jobs**: 2,829
 
 <img src="./img/image-17.png" alt="Daily Volume" width="400"/>
 
@@ -26,7 +75,7 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 ### ⏳ Posting Duration
 
-* Most postings lasted **1–4 days** (3 days most common)
+* Most postings last **1–4 days**
 * Longest listing: **29 days**
 
 <img src="./img/image-18.png" alt="Duration" width="400"/>
@@ -35,7 +84,7 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 ### 📅 Weekly & Daily Trends
 
-* Higher activity during **May–June**
+* Higher activity seen in **May–June**
 
 <img src="./img/image-23.png" alt="Weekly Trend" width="400"/>
 
@@ -43,8 +92,8 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 ### 👥 Role Levels
 
-* **Junior**: 2.05%
-* **Senior**: 16.28%
+* **Junior**: 2.05%  
+* **Senior**: 16.28%  
 * **Other**: 81.67%
 
 <img src="./img/image-6.png" alt="Role Breakdown" width="400"/>
@@ -53,8 +102,8 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 ### 🧾 Advertiser Insights
 
-* **70%** of advertisers posted only **1 job**
-* Max from a single advertiser: **26 listings** (0.07%)
+* **70%** of advertisers posted only **1 job**  
+* Most active advertiser posted **26 jobs**
 
 <img src="./img/image-8.png" alt="Advertiser Count" width="400"/>  
 <img src="./img/image-9.png" alt="Advertiser Spread" width="400"/>
@@ -63,7 +112,7 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 ### 🚀 Promotions
 
-* **7%** of listings were **promoted**
+* **7%** of jobs were marked as **promoted**
 
 <img src="./img/image-10.png" alt="Promotions" width="400"/>
 
@@ -75,33 +124,24 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 ---
 
-### 🗺️ State & Region Distribution
+### 🗺️ State & Region Breakdown
 
-* **NSW + VIC** = over **60%** of all postings
+* **NSW + VIC = 60%+** of postings
 
 <img src="./img/image-15.png" alt="State Distribution" width="400" height="150"/>  
-
-<img src="./img/image-14.png" alt="State Breakdown" width="300" height="150"/>
-
-* Top regions exceed their state’s average
-
+<img src="./img/image-14.png" alt="State Breakdown" width="300" height="150"/>  
 <img src="./img/image-16.png" alt="Top Regions" />
-
-* **NT, TAS, WA** had the lowest numbers
 
 ---
 
 ### 📆 Daily New Postings
 
-* **Avg. new postings/day**: 42
-* **Total new jobs (snapshot period)**: 2,675
+* **Average/day**: 42  
+* **Total (snapshot period)**: 2,675  
+* **Most active day**: **Tuesday**
 
-<img src="./img/image-19.png" alt="New Jobs Daily" width="300"/>
-
-* **Tuesday** saw the most new postings weekly
-
+<img src="./img/image-19.png" alt="New Jobs Daily" width="300"/>  
 <img src="./img/image-20.png" alt="Tuesday Peak" width="350"/>  
-
 <img src="./img/image-22.png" alt="Day of Week Trends" height="200"/>
 
 ---
@@ -110,86 +150,45 @@ This project analyzes **Data Analyst** job listings across Australia over a two-
 
 <img src="./img/image-24.png" alt="Industries" />
 
-Absolutely — based on the insights from your job posting data analysis, here are several actionable **recommendations** tailored to job seekers, recruiters, and analysts studying the market:
-
 ---
 
 ## 📌 Recommendations Based on Insights
 
-### 🎯 1. **Post Jobs on Weekdays (Preferably Tuesday)**
+### 1. 🕒 Post Jobs Early in the Week  
+Tuesdays see the most new postings — both recruiters and job seekers should act accordingly.
 
-* **Insight**: Tuesday has the highest number of new job listings.
-* **Recommendation**:
+### 2. ⚠️ Optimize for Short Lifespan  
+Jobs typically stay up only 3 days. Job seekers need alerts; recruiters may consider promoting or reposting mid-week.
 
-  * Recruiters should schedule job posts early in the week to increase visibility.
-  * Job seekers should check platforms actively on Tuesdays and Wednesdays for fresh listings.
+### 3. 📍 Prioritize NSW & VIC  
+These two states offer the majority of roles. Candidates should focus here unless searching for remote roles.
 
----
+### 4. 📆 Align Hiring with Seasonal Peaks  
+May–June sees a hiring boost — great time to apply or post.
 
-### 🔍 2. **Optimize for Short Job Lifespan**
+### 5. 🎓 Address the Junior Role Gap  
+Only ~2% of jobs target junior talent. Graduates should focus on internships or skill-building, and companies should invest in entry-level roles.
 
-* **Insight**: Most jobs stay active for **1–4 days**, with 3 being the most common.
-* **Recommendation**:
+### 6. 🔍 Target Top Hiring Companies  
+Some companies hire at higher volumes — great targets for job seekers.
 
-  * Job seekers need to act fast — set up job alerts or check platforms daily.
-  * Recruiters should use **promoted listings** or refresh posts mid-week to extend exposure.
-
----
-
-### 💼 3. **Focus on Major Hiring States**
-
-* **Insight**: **NSW and VIC** account for over 60% of analyst jobs.
-* **Recommendation**:
-
-  * Job seekers should prioritize these regions unless looking for remote/flexible roles.
-  * Employers in smaller states can stand out more due to lower competition.
+### 7. 📣 Promote Listings When Urgent  
+Only 7% of jobs are promoted, so standing out is possible with boosted visibility.
 
 ---
 
-### 📈 4. **Capitalize on Growth Periods**
+## ❤️ Acknowledgements
 
-* **Insight**: Job volume increases during May–June, with noticeable weekday spikes.
-* **Recommendation**:
+Thanks to:
+- **SEEK** for providing publicly available job postings.
+- **Snowflake** for cloud data warehousing.
+- **Tableau** for interactive visualizations.
 
-  * Companies should align hiring cycles with these trends to access a larger applicant pool.
-  * Job seekers might find more opportunities during Q2.
 
----
+## ⚠️ Disclaimer
 
-### 🧠 5. **Senior Roles Dominate the Market**
+The data used in this project was **collected from publicly available job postings on SEEK** during the specified time period. It reflects **real-world job market conditions** as observed between **25 April – 26 June 2025**.
 
-* **Insight**: Only \~2% of postings are for **junior analysts**, \~16% for **seniors**.
-* **Recommendation**:
+This project is conducted **solely for educational and non-commercial purposes** to demonstrate data analysis, modeling, and visualization techniques.  
 
-  * New grads or career switchers should focus on upskilling, internships, or bootcamps to stand out.
-  * Companies should consider creating **entry-level pipelines** to grow internal talent.
 
----
-
-### 🏢 6. **Target High-Volume Employers**
-
-* **Insight**: Most advertisers post only once, but a few post in **high volumes (up to 26 jobs)**.
-* **Recommendation**:
-
-  * Job seekers can identify and follow these companies for consistent openings.
-  * Recruiters should benchmark hiring frequency against competitors to assess visibility.
-
----
-
-### 🚀 7. **Use Promotion Strategically**
-
-* **Insight**: 7% of analyst jobs are **promoted**, suggesting urgency.
-* **Recommendation**:
-
-  * If roles are time-sensitive or niche, employers should consider promoting listings.
-  * Job seekers may want to prioritize promoted jobs for faster interview processes.
-
----
-
-### 🏭 8. **Industry Trends Matter**
-
-* **Insight**: Certain industries and fields dominate analyst hiring.
-* **Recommendation**:
-
-  * Job seekers should tailor their resumes and keywords based on top industries hiring analysts.
-  * Recruiters can reference this to understand talent demand and competition.
