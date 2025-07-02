@@ -34,7 +34,7 @@ Link to Dashboard: [Tableau](https://public.tableau.com/app/profile/tien.le2550/
 | 1     | SEEK Jobs  | Web scraping | Data Analyst job listings (AU)   | CSV         |
 
 
-Column defination:
+Column definition:
 | Column Name                   | Description                                             |
 | ----------------------------- | ------------------------------------------------------- |
 | `snapshot_date`               | Date when the data snapshot was taken                   |
