@@ -35,8 +35,6 @@
 
 This project analyzes Analyst job postings across Australia over a 2-month period. It highlights hiring patterns, industry demand, job types, and employer trends. These insights are designed to support job seekers, career advisors, recruiters, and policy makers in navigating the current employment landscape.
 
-> **Data Sources:** [`seek_raw_data.csv`](seek_data_snowflake_no_header.csv)  
-
 ### 🔍 Key Findings:
 * **Information & Technology** is the leading industry hiring Analyst roles.
 * **Data Analyst** and **Business Analyst** are the most common roles.
