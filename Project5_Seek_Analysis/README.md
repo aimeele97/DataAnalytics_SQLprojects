@@ -8,23 +8,30 @@
 ---
 
 ## 📚 Table of Contents
+<!-- TOC -->
 
-1. [🎯 Quick Overview of Findings](#1-quick-overview-of-findings)
-2. [📂 Source of Data & Limitations](#source-of-data--limitations)
-3. [⚙️ Data Transformation Process](#transforming-the-data)
-4. [📊 Summary Visuals & Insights](#summary-visuals--insights)
+- [📊 2-Month Analyst Job Market Overview 25 April – 26 June](#-2-month-analyst-job-market-overview-25-april--26-june)
+    - [Quick Overview of Findings](#quick-overview-of-findings)
+    - [Source of Data and Limitations](#source-of-data-and-limitations)
+        - [Process](#process)
+        - [Limitations](#limitations)
+    - [Transfroming the data](#transfroming-the-data)
+        - [Step 1: Data Cleaning](#step-1-data-cleaning)
+        - [Step 2: Data Modeling](#step-2-data-modeling)
+    - [Key Insights](#key-insights)
+        - [**Top Hiring Industry: Information & Technology**](#top-hiring-industry-information--technology)
+        - [**Most Common Analyst Roles**](#most-common-analyst-roles)
+        - [**Top Hiring Locations**](#top-hiring-locations)
+        - [**Analyst Job Features**](#analyst-job-features)
+        - [**Peak Posting Period**](#peak-posting-period)
+        - [**Top Hiring Organization: ASIC**](#top-hiring-organization-asic)
+    - [Recommendations based on the analysis and my own experiences](#recommendations-based-on-the-analysis-and-my-own-experiences)
+    - [Final Note](#final-note)
 
-   * [🏢 Top Hiring Industry: Information & Technology](#1-top-hiring-industry-information--technology)
-   * [💼 Most Common Analyst Roles](#2-most-common-analyst-roles)
-   * [📍 Top Hiring Locations](#3-top-hiring-locations)
-   * [📈 Job Features](#4-job-features)
-   * [🗓️ Peak Posting Period](#5-peak-posting-period)
-   * [🧾 Top Hiring Organization: ASIC](#6-top-hiring-organization-asic)
-5. [✅ Recommendations based on the analysis and my own experiences](#recommendations-based-on-the-analysis-and-my-own-experiences)
-6. [📌 Final Note](#final-note)
+<!-- /TOC -->
 
 ---
-## 🎯 1. Quick Overview of Findings
+## Quick Overview of Findings
 
 This project analyzes Analyst job postings across Australia over a 2-month period. It highlights hiring patterns, industry demand, job types, and employer trends. These insights are designed to support job seekers, career advisors, recruiters, and policy makers in navigating the current employment landscape.
 
@@ -38,21 +45,19 @@ This project analyzes Analyst job postings across Australia over a 2-month perio
 * The majority of roles are **full-time** and offer **hybrid** work arrangements.
 * Job postings **peaked in the week of 19 May**, suggesting possible seasonal hiring trends.
 
-  ![alt text](image-1.png)
+  ![alt text](img/image-1.png)  
 
----
-
-## 📂 Source of Data & Limitations
+## Source of Data and Limitations
 
 **Job posting data** was scraped from **[Seek.com](https://www.seek.com.au/)**, one of Australia’s largest job platforms.
 
-### 🔧 Process
+### Process
 
-* The dataset was collected over a **3-month period**, focusing on roles containing the keyword **“Analyst.”**
+* The dataset was collected over a **2-month period**, focusing on roles containing the keyword **“Analyst.”**
 * Data was extracted using custom scripts that pulled job listings from the **first 10 pages** of search results at each scraping interval.
 * Scraping was done **periodically**, not daily.
 
-### ⚠️ Limitations
+### Limitations
 
 * **Partial Market Coverage**: Because only the first 10 pages were scraped per session, the dataset may **exclude listings** beyond that range — especially during high-volume weeks.  
 
@@ -65,7 +70,6 @@ This project analyzes Analyst job postings across Australia over a 2-month perio
 
 * As a result, this analysis should be viewed as an **indicative snapshot of hiring trends**, not a full representation of the Australian job market.  
   
-
 
 **Column definition:**
 | Column Name                   | Description                                             |
@@ -109,15 +113,15 @@ This project analyzes Analyst job postings across Australia over a 2-month perio
 
 ---
 
-### ⚙️ Transfroming the data
+## Transfroming the data
 
-#### Step 1: Data Cleaning
+### Step 1: Data Cleaning
 - Uploaded cleaned CSV to **Snowflake**
 - Filtered the job with no **'Analyst'** word in the Title
 - Checked and removed duplicate record
 - Rename the column
 
-#### Step 2: Data Modeling
+### Step 2: Data Modeling
 - Used SQL to create fact and dimension table to model the data
 
 Source code example:
@@ -138,26 +142,15 @@ Source code example:
 
 ---
 
-## 📊 Summary Visuals & Insights
+## Key Insights
 
-### 📌 General Summary for Analyst-Specific Job Titles
-
-* **Avg. analyst job postings/day**: 42  
-* **Total analyst-specific jobs**: 2,829
-
-<img src="./img/image-17.png" alt="Daily Volume" width="400"/>
-
----
-
-## 🔍 Key Insights
-
-### 🏢 1. **Top Hiring Industry: Information & Technology**
+### **Top Hiring Industry: Information & Technology**
 
 * The **Information & Technology** sector posted the highest number of Analyst roles (41.86% of total), reflecting the ongoing demand for digital, data, and system transformation skills, followed by the **Accounting & Banking, Finance industry**, which also shows strong demand for analytical and reporting capabilities.  
 
-  ![alt text](image-3.png)
+  ![alt text](img/image-3.png)
 
-### 💼 2. **Most Common Analyst Roles**
+### **Most Common Analyst Roles**
 
 * The most frequently advertised role titles for all level were:
 
@@ -167,18 +160,16 @@ Source code example:
 
 Example Titles for Junior Level:   
 
-![alt text](image-4.png)
+![alt text](img/image-4.png)
 
-### 📍 3. **Top Hiring Locations**
+### **Top Hiring Locations**
 
 * **NSW (Sydney)** had the highest job posting volume, followed by **VIC (Melbourne)**.
 * Most roles were concentrated in urban hubs where large corporates and government agencies are based.
 
-  ![alt text](image-5.png)
+  ![alt text](img/image-5.png)
 
----
-
-### 📈 4. Job Features
+### **Analyst Job Features**
 
 * **Seniority Level:** The majority of job postings **did not specify a job level**. However, among those that did, **senior-level positions** were the most frequently indicated.
 
@@ -186,15 +177,15 @@ Example Titles for Junior Level:
 
 * **Work Mode:** Unlike many general IT roles that often support remote work, **Analyst positions more commonly require hybrid or on-site presence**. This is an important consideration for candidates pursuing an Analyst career path, particularly those seeking location flexibility.
 
-  ![alt text](image-6.png)
+  ![alt text](img/image-6.png)
 
-### 🗓️ 5. **Peak Posting Period**
+### **Peak Posting Period**
 
 * **Job Posting Trends:** The number of job postings **peaked during the week of 19 May**, largely driven by a spike in listings on **26 May**. However, the **overall volume of postings remained relatively stable week to week**, with no significant fluctuations across the 2-month period.
 
-  ![alt text](image-8.png)![alt text](image-7.png)
+  ![alt text](img/image-8.png)![alt text](img/image-7.png)
 
-### 🧾 6. **Top Hiring Organization: ASIC**
+### **Top Hiring Organization: ASIC**
 
 * A total of **1,394 unique advertisers (companies)** posted Analyst roles on Seek.com during the analysis period.
 * The highest number of postings from a single employer was **42 jobs**, listed by **The Australian Securities and Investments Commission (ASIC)** — a government agency.
@@ -206,11 +197,11 @@ Example Titles for Junior Level:
 
 This would help avoid inflated counts and provide a clearer view of which industries and employers are truly hiring the most Analysts.
 
-  ![alt text](image-9.png)
+  ![alt text](img/image-9.png)
 
 ---
 
-## ✅ Recommendations based on the analysis and my own experiences
+## Recommendations based on the analysis and my own experiences
 
 
 **Understand the Employment Environment:** The job environment for Analyst roles in Australia is shaped by a mix of factors, including visa eligibility, work format preferences, and employer expectations. Candidates — especially international ones — need to approach their job search with strategic awareness.
@@ -234,7 +225,7 @@ This would help avoid inflated counts and provide a clearer view of which indust
 
 ---
 
-## 📌 Final Note
+## Final Note
 
 This basic analysis offers a useful snapshot of Analyst job market trends in Australia. While not exhaustive, it highlights key opportunities and challenges for different types of job seekers, especially in a country where many candidates are international students or temporary workers seeking experience or sponsorship.
 
