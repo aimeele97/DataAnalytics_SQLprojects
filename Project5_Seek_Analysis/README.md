@@ -1,4 +1,4 @@
-# 📊 Data Analyst Job Postings in Australia (25 April – 26 June)
+# 📊 2-Month Analyst Job Market Overview (25 April – 26 June)
 
 > **Tools:** Snowflake, SQL, Tableau  
 > **Techniques:** Data Analysis, Data Modeling, Data Visualization  
@@ -7,33 +7,67 @@
 
 ---
 
+## 📚 Table of Contents
+
+1. [🎯 Quick Overview of Findings](#1-quick-overview-of-findings)
+2. [📂 Source of Data & Limitations](#source-of-data--limitations)
+3. [⚙️ Data Transformation Process](#transforming-the-data)
+4. [📊 Summary Visuals & Insights](#summary-visuals--insights)
+
+   * [🏢 Top Hiring Industry: Information & Technology](#1-top-hiring-industry-information--technology)
+   * [💼 Most Common Analyst Roles](#2-most-common-analyst-roles)
+   * [📍 Top Hiring Locations](#3-top-hiring-locations)
+   * [📈 Job Features](#4-job-features)
+   * [🗓️ Peak Posting Period](#5-peak-posting-period)
+   * [🧾 Top Hiring Organization: ASIC](#6-top-hiring-organization-asic)
+5. [✅ Recommendations based on the analysis and my own experiences](#recommendations-based-on-the-analysis-and-my-own-experiences)
+6. [📌 Final Note](#final-note)
+
+---
 ## 🎯 1. Quick Overview of Findings
 
-This project explores job posting trends for **Data Analyst** roles in Australia over a two-month period. Using data scraped from SEEK, we processed, modeled, and visualized insights to understand demand, timing, location patterns, and hiring behavior.
+This project analyzes Analyst job postings across Australia over a 2-month period. It highlights hiring patterns, industry demand, job types, and employer trends. These insights are designed to support job seekers, career advisors, recruiters, and policy makers in navigating the current employment landscape.
 
-> **Project Name:** Data Analyst Job Trends Australia  
 > **Data Sources:** [`seek_raw_data.csv`](seek_data_snowflake_no_header.csv)  
-> **Tools Used:** Python, SQL, Tableau, Excel  
 
 ### 🔍 Key Findings:
-- **Information & communication technology** is the top industry hiring analysts
-- **NSW & VIC** dominate analyst job opportunities
-- **Most jobs** remain live for only **1 to 4 days**
-- **Tuesdays** are the best day to apply or post
-- Very few roles are mentioned level in the job title, around 95% of unspecified which level tare hiring
+* **Information & Technology** is the leading industry hiring Analyst roles.
+* **Data Analyst** and **Business Analyst** are the most common roles.
+* **Sydney** leads in job volume, followed by **Melbourne**.
+* **Most postings did not specify a seniority level**, but among those that did, **senior-level roles were the most common**.
+* The majority of roles are **full-time** and offer **hybrid** work arrangements.
+* Job postings **peaked in the week of 19 May**, suggesting possible seasonal hiring trends.
 
-  ![Demo](./img/seek%20record.gif) 
+  ![alt text](image-1.png)
 
 ---
 
-## 🌐 2. Sources of Data
+## 📂 Source of Data & Limitations
 
-| Index | Name       | Source       | Summary                         | Data Format |
-|-------|------------|--------------|----------------------------------|-------------|
-| 1     | seek raw data  | Seek.com.au | Web scraping - Data Analyst job listings (AU)   | CSV         |
+**Job posting data** was scraped from **[Seek.com](https://www.seek.com.au/)**, one of Australia’s largest job platforms.
+
+### 🔧 Process
+
+* The dataset was collected over a **3-month period**, focusing on roles containing the keyword **“Analyst.”**
+* Data was extracted using custom scripts that pulled job listings from the **first 10 pages** of search results at each scraping interval.
+* Scraping was done **periodically**, not daily.
+
+### ⚠️ Limitations
+
+* **Partial Market Coverage**: Because only the first 10 pages were scraped per session, the dataset may **exclude listings** beyond that range — especially during high-volume weeks.  
+
+* **Sampling Gaps**: The scraping schedule was not continuous, meaning **some job postings may have been missed** between scrapes.
+
+* **Search Inaccuracy**: Seek.com’s keyword-based search can surface jobs that **do not have "Analyst" in the job title**, but include the term in the job description.  
+  --> To maintain scope and relevance, these **non-Analyst-titled roles were filtered out after scraping**.
+
+* **Employer Visibility**: Some employers may be underrepresented if their listings appeared beyond the scraped range or if they used broader or alternate job titles.
+
+* As a result, this analysis should be viewed as an **indicative snapshot of hiring trends**, not a full representation of the Australian job market.  
+  
 
 
-Column definition:
+**Column definition:**
 | Column Name                   | Description                                             |
 | ----------------------------- | ------------------------------------------------------- |
 | `snapshot_date`               | Date when the data snapshot was taken                   |
@@ -75,10 +109,11 @@ Column definition:
 
 ---
 
-### ⚙️ Getting the Data
+### ⚙️ Transfroming the data
 
 #### Step 1: Data Cleaning
 - Uploaded cleaned CSV to **Snowflake**
+- Filtered the job with no **'Analyst'** word in the Title
 - Checked and removed duplicate record
 - Rename the column
 
@@ -103,26 +138,9 @@ Source code example:
 
 ---
 
-## 📚 Assumptions
-
-- Data was scraped from **only 10 pages per run**, so not all postings were captured during the period.
-- Role levels are classified based on title keyword matches.
-
----
-
 ## 📊 Summary Visuals & Insights
 
-### 📌 General Summary
-* **Total postings**: 8,140  
-* **Unique companies**: 2,051  
-* **Locations**: 543 across Australia  
-* **Keyword**: “data analyst”
-
-<img src="./img/image-1.png" alt="Job Summary" width="500" />
-
----
-
-### 📈 Analyst-Specific Job Titles
+### 📌 General Summary for Analyst-Specific Job Titles
 
 * **Avg. analyst job postings/day**: 42  
 * **Total analyst-specific jobs**: 2,829
@@ -131,115 +149,98 @@ Source code example:
 
 ---
 
-### ⏳ Posting Duration
+## 🔍 Key Insights
 
-* Most postings last **1–4 days**
-* Longest listing: **29 days**
+### 🏢 1. **Top Hiring Industry: Information & Technology**
 
-<img src="./img/image-18.png" alt="Duration" width="400"/>
+* The **Information & Technology** sector posted the highest number of Analyst roles (41.86% of total), reflecting the ongoing demand for digital, data, and system transformation skills, followed by the **Accounting & Banking, Finance industry**, which also shows strong demand for analytical and reporting capabilities.  
 
----
+  ![alt text](image-3.png)
 
-### 📅 Weekly & Daily Trends
+### 💼 2. **Most Common Analyst Roles**
 
-* Higher activity seen in **May–June**
+* The most frequently advertised role titles for all level were:
 
-<img src="./img/image-23.png" alt="Weekly Trend" width="400"/>
+  * **Data Analyst**
+  * **Business Analyst**
+* These reflect a dual demand for technical data expertise and business process improvement.
 
----
+Example Titles for Junior Level:   
 
-### 👥 Role Levels
+![alt text](image-4.png)
 
-* **Junior**: 2.05%  
-* **Senior**: 16.28%  
-* **Other**: 81.67%
+### 📍 3. **Top Hiring Locations**
 
-<img src="./img/image-6.png" alt="Role Breakdown" width="400"/>
+* **NSW (Sydney)** had the highest job posting volume, followed by **VIC (Melbourne)**.
+* Most roles were concentrated in urban hubs where large corporates and government agencies are based.
 
----
-
-### 🧾 Advertiser Insights
-
-* **70%** of advertisers posted only **1 job**  
-* Most active advertiser posted **26 jobs**
-
-<img src="./img/image-8.png" alt="Advertiser Count" width="400"/>  
-<img src="./img/image-9.png" alt="Advertiser Spread" width="400"/>
+  ![alt text](image-5.png)
 
 ---
 
-### 🚀 Promotions
+### 📈 4. Job Features
 
-* **7%** of jobs were marked as **promoted**
+* **Seniority Level:** The majority of job postings **did not specify a job level**. However, among those that did, **senior-level positions** were the most frequently indicated.
 
-<img src="./img/image-10.png" alt="Promotions" width="400"/>
+* **Employment Type:** Most roles were offered as **full-time positions**, with only a small portion listing **part-time** or **casual contracts**.
 
----
+* **Work Mode:** Unlike many general IT roles that often support remote work, **Analyst positions more commonly require hybrid or on-site presence**. This is an important consideration for candidates pursuing an Analyst career path, particularly those seeking location flexibility.
 
-### 🏢 Top Hiring Companies
+  ![alt text](image-6.png)
 
-<img src="./img/image-11.png" alt="Top Companies" width="400"/>
+### 🗓️ 5. **Peak Posting Period**
 
----
+* **Job Posting Trends:** The number of job postings **peaked during the week of 19 May**, largely driven by a spike in listings on **26 May**. However, the **overall volume of postings remained relatively stable week to week**, with no significant fluctuations across the 2-month period.
 
-### 🗺️ State & Region Breakdown
+  ![alt text](image-8.png)![alt text](image-7.png)
 
-* **NSW + VIC = 60%+** of postings
+### 🧾 6. **Top Hiring Organization: ASIC**
 
-<img src="./img/image-15.png" alt="State Distribution" width="400" height="150"/>  
-<img src="./img/image-14.png" alt="State Breakdown" width="300" height="150"/>  
-<img src="./img/image-16.png" alt="Top Regions" />
+* A total of **1,394 unique advertisers (companies)** posted Analyst roles on Seek.com during the analysis period.
+* The highest number of postings from a single employer was **42 jobs**, listed by **The Australian Securities and Investments Commission (ASIC)** — a government agency.
+* Several of the other top advertisers were **large recruitment agencies**, which may introduce **bias** into the analysis, as they often post roles across multiple industries or repost similar jobs.
+* For more accurate industry-level insights, a **deeper analysis is recommended**, including:
 
----
+  * **Filtering out major recruitment firms**
+  * **Grouping postings by actual hiring organization**, not the advertising agency
 
-### 📆 Daily New Postings
+This would help avoid inflated counts and provide a clearer view of which industries and employers are truly hiring the most Analysts.
 
-* **Average/day**: 42  
-* **Total (snapshot period)**: 2,675  
-* **Most active day**: **Tuesday**
-
-<img src="./img/image-19.png" alt="New Jobs Daily" width="300"/>  
-<img src="./img/image-20.png" alt="Tuesday Peak" width="350"/>  
-<img src="./img/image-22.png" alt="Day of Week Trends" height="200"/>
+  ![alt text](image-9.png)
 
 ---
 
-### 🏭 Top Industries Hiring Analysts
+## ✅ Recommendations based on the analysis and my own experiences
 
-<img src="./img/image-24.png" alt="Industries" />
 
----
+**Understand the Employment Environment:** The job environment for Analyst roles in Australia is shaped by a mix of factors, including visa eligibility, work format preferences, and employer expectations. Candidates — especially international ones — need to approach their job search with strategic awareness.
 
-## 📌 Recommendations Based on Insights
 
-Hiring Copany 
-### 1. Post Jobs Early in the Week  
-Tuesdays see the most new postings — both recruiters and job seekers should act accordingly.
+* **Visa & Sponsorship Awareness**:  Although **ASIC** posted the highest number of Analyst roles across Australia, it's important to note that **most government jobs — including those at ASIC — do not accept visa holders**, even if the candidate meets all other criteria such as skills, experience, and full-time availability. This is particularly true for **permanent full-time positions**. Based on prior research, visa holders should be especially cautious when applying to government roles. It’s essential to **research each company’s visa policies**, and always **read job descriptions carefully** to confirm **visa eligibility**. This helps avoid wasted effort and ensures you're targeting roles that align with your employment status.
 
-### 2. ⚠️ Optimize for Short Lifespan  
-Jobs typically stay up only 3 days. Job seekers need alerts; recruiters may consider promoting or reposting mid-week.
+* **Hybrid & On-Site Expectations**: Unlike many software or engineering roles that offer remote flexibility, **Analyst positions often require hybrid or on-site presence**, especially in finance, consulting, and public sector organizations. Candidates should be prepared for **in-person collaboration**, client-facing duties, or office-based compliance requirements.
 
-### 3. 📍 Prioritize NSW & VIC  
-These two states offer the majority of roles. Candidates should focus here unless searching for remote roles.
+* **Job Titles vs. Role Scope**: Due to keyword-based job search platforms like Seek, some roles that are **not truly Analyst positions** may still appear in search results. Job seekers should:
 
-### 4. 📆 Align Hiring with Seasonal Peaks  
-May–June sees a hiring boost — great time to apply or post.
+  * **Evaluate job descriptions thoroughly** to confirm alignment with their skills and career goals.
+  * Be cautious of roles from **recruitment firms** that reuse the “Analyst” title across unrelated industries.
 
-### 5. 🎓 Address the Junior Role Gap  
-Only ~2% of jobs target junior talent. Graduates should focus on internships or skill-building, and companies should invest in entry-level roles.
+* **Competitive Market for Entry-Level Roles**: Since most postings **do not specify seniority**, and those that do lean toward **senior-level**, junior candidates must:
 
-### 6. 🔍 Target Top Hiring Companies  
-Some companies hire at higher volumes — great targets for job seekers.
+  * Look for **graduate programs**, internships, or entry-level roles that explicitly state suitability for early-career applicants.
+  * Consider upskilling through **short courses, bootcamps, or certifications** to improve competitiveness.
 
-### 7. 📣 Promote Listings When Urgent  
-Only 7% of jobs are promoted, so standing out is possible with boosted visibility.
+* **Timing Your Applications**: Although job volume remained stable overall, the spike around **late May** suggests that hiring may align with **budget cycles, project phases**, or **financial year transitions**. Understanding this can help candidates **time applications more effectively**.
 
 ---
 
-## ⚠️ Disclaimer
+## 📌 Final Note
 
-The data used in this project was **collected from publicly available job postings on SEEK** during the specified time period. It reflects **real-world job market conditions** as observed between **25 April – 26 June 2025**.
+This basic analysis offers a useful snapshot of Analyst job market trends in Australia. While not exhaustive, it highlights key opportunities and challenges for different types of job seekers, especially in a country where many candidates are international students or temporary workers seeking experience or sponsorship.
 
-This project is conducted **solely for educational and non-commercial purposes** to demonstrate data analysis, modeling, and visualization techniques.  
+A deeper analysis in future could include:
 
-
+* Salary trends
+* Required technical skills
+* Application conversion rates
+* Keyword-level job description mining
