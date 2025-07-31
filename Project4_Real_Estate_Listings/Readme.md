@@ -1,4 +1,6 @@
 ## 🏘️ Real Estate Listings Project (1 Month Data)
+
+--- 
 ## 🔗 Quick Access
 
 - 💬 [LinkedIn Project Post](https://www.linkedin.com/feed/update/urn:li:activity:7339201532086689795/)
@@ -9,29 +11,33 @@
 
 ---
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Tools & Techniques](#tools--techniques)
-- [Data Collection & Overview](#data-collection--overview)
-- [Data Modeling Approach](#data-modeling-approach)
-- [Data Exploration](#sql-based-data-exploration)
-- [Dashboard Highlights](#dashboard-highlights)
-- [Key Insights](#key-insights)
-    - [Balanced Market Activity](#balanced-market-activity)
-    - [29 Days to Sell](#29-days-to-sell)
-    - [Market Dominated by Houses](#market-dominated-by-houses)
-    - [Buyer Behavior from Inspections](#buyer-behavior-from-inspections)
-    - [Private Treaty Over Auctions](#private-treaty-over-auctions)
+<details>
+<summary><strong>📚  Table of Contents</strong></summary>  
+  
+- [Overview](#overview)  
+- [Tools & Techniques](#tools--techniques)  
+- [Data Collection & Overview](#data-collection--overview)  
+- [Data Modeling Approach](#data-modeling-approach)  
+- [Data Exploration](#sql-based-data-exploration)  
+- [Dashboard Highlights](#dashboard-highlights)  
+- [Key Insights](#key-insights)  
+    - [Balanced Market Activity](#balanced-market-activity)  
+    - [29 Days to Sell](#29-days-to-sell)  
+    - [Market Dominated by Houses](#market-dominated-by-houses)  
+    - [Buyer Behavior from Inspections](#buyer-behavior-from-inspections)  
+    - [Private Treaty Over Auctions](#private-treaty-over-auctions)  
 - [Final Thoughts](#final-thoughts)
 
----
+</details>
 
+---
 ## Overview
 
 This project dives into real-world property listings, taking raw, messy data and transforming it into structured insights using SQL and Tableau. More than just a technical exercise, it's a reflection of how data, when shaped the right way, can tell powerful stories about markets, people, and places.
 
 Key findings include a 29-day average selling window, strong buyer preference for houses, peak inspection activity on weekends, and a clear dominance of private treaty over auction sales. These insights can help real estate agents, sellers, and market analysts make data-informed decisions around pricing strategies, listing timing, and property type focus.
+
+--- 
 
 ## Tools & Techniques
 
@@ -56,7 +62,7 @@ Raw data overview
 
 ![alt text](img/image-14.png)
 
-
+--- 
 ## Data Modeling Approach
 
 Created SQL queries to split the data into:
@@ -69,6 +75,7 @@ This structure follows best practices for scalable, reliable analytics.
 
 ![alt text](img/image-15.png)
 
+--- 
 
 ## SQL-Based Data Exploration
 
@@ -116,7 +123,7 @@ group by cte.listing_id,f.agent_id, f.first_go_live,
     f.last_price_change, f.listing_price_view
 order by cte.listing_id, first_go_live;
 ```
-
+--- 
 
 ## Dashboard Highlights
 
@@ -129,6 +136,8 @@ Using Tableau, I created a dashboard with 3 interactive tabs:
 🔗 [View on LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:7339201532086689795/)
 
 🔗 [View on Tableau Public](https://public.tableau.com/app/profile/tien.le2550/viz/real_estate_dashboard_17476316458810_17490860210760/DashboardKPI)
+
+--- 
 
 ## Key Insights
 
@@ -158,6 +167,8 @@ Most listings had **1–2 inspections**, peaking on weekends. One standout prope
 ### Private Treaty Over Auctions
 
 Only **8%** of inspections were linked to auctions — confirming **private treaty** as the dominant method in this market.
+
+--- 
 
 ## Final Thoughts
 
