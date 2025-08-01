@@ -8,29 +8,23 @@
 ---
 
 ## 📚 Table of Contents
-<!-- TOC -->
 
-- [📊 2-Month Analyst Job Market Overview 25 April – 26 June](#-2-month-analyst-job-market-overview-25-april--26-june)
-    - [📚 Table of Contents](#-table-of-contents)
-    - [Quick Overview of Findings](#quick-overview-of-findings)
-        - [🔍 Key Findings:](#-key-findings)
-    - [Source of Data and Limitations](#source-of-data-and-limitations)
-        - [Process](#process)
-        - [Limitations](#limitations)
-    - [Transfroming the data](#transfroming-the-data)
-        - [Step 1: Data Cleaning](#step-1-data-cleaning)
-        - [Step 2: Data Modeling](#step-2-data-modeling)
-    - [Key Insights](#key-insights)
-        - [**Top Hiring Industry: Information & Technology**](#top-hiring-industry-information--technology)
-        - [**Most Common Analyst Roles**](#most-common-analyst-roles)
-        - [**Top Hiring Locations**](#top-hiring-locations)
-        - [**Analyst Job Features**](#analyst-job-features)
-        - [**Peak Posting Period**](#peak-posting-period)
-        - [**Top Hiring Organization: ASIC**](#top-hiring-organization-asic)
-    - [Recommendations based on the analysis and my own experiences](#recommendations-based-on-the-analysis-and-my-own-experiences)
-    - [Final Note](#final-note)
-
-<!-- /TOC -->
+  - [Quick Overview of Findings](#quick-overview-of-findings)
+  - [Source of Data and Limitations](#source-of-data-and-limitations)
+      - [Process](#process)
+      - [Limitations](#limitations)
+  - [Transfroming the data](#transfroming-the-data)
+      - [Step 1: Data Cleaning](#step-1-data-cleaning)
+      - [Step 2: Data Modeling](#step-2-data-modeling)
+  - [Key Insights](#key-insights)
+      - [**Top Hiring Industry: Information & Technology**](#top-hiring-industry-information--technology)
+      - [**Most Common Analyst Roles**](#most-common-analyst-roles)
+      - [**Top Hiring Locations**](#top-hiring-locations)
+      - [**Analyst Job Features**](#analyst-job-features)
+      - [**Peak Posting Period**](#peak-posting-period)
+      - [**Top Hiring Organization: ASIC**](#top-hiring-organization-asic)
+  - [Recommendations](#recommendations-based-on-the-analysis-and-my-own-experiences)
+  - [Final Note](#final-note)
 
 ---
 ## Quick Overview of Findings
