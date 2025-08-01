@@ -11,7 +11,9 @@
 <!-- TOC -->
 
 - [📊 2-Month Analyst Job Market Overview 25 April – 26 June](#-2-month-analyst-job-market-overview-25-april--26-june)
+    - [📚 Table of Contents](#-table-of-contents)
     - [Quick Overview of Findings](#quick-overview-of-findings)
+        - [🔍 Key Findings:](#-key-findings)
     - [Source of Data and Limitations](#source-of-data-and-limitations)
         - [Process](#process)
         - [Limitations](#limitations)
@@ -39,9 +41,8 @@ This project analyzes Analyst job postings across Australia over a 2-month perio
 * **Information & Technology** is the leading industry hiring Analyst roles.
 * **Data Analyst** and **Business Analyst** are the most common roles.
 * **Sydney** leads in job volume, followed by **Melbourne**.
-* **Most postings did not specify a seniority level**, but among those that did, **senior-level roles were the most common**.
-* The majority of roles are **full-time** and offer **hybrid** work arrangements.
-* Job postings **peaked in the week of 19 May**, suggesting possible seasonal hiring trends.
+* **Most postings did not specify a job level**; however, among those that did, the majority of analyst roles required a senior level.
+* Most roles are **full-time** and offer **hybrid** work arrangements.
 
   ![alt text](img/image-1.png)  
 
@@ -53,20 +54,14 @@ This project analyzes Analyst job postings across Australia over a 2-month perio
 
 * The dataset was collected over a **2-month period**, focusing on roles containing the keyword **“Analyst.”**
 * Data was extracted using custom scripts that pulled job listings from the **first 10 pages** of search results at each scraping interval.
-* Scraping was done **periodically**, not daily.
 
 ### Limitations
 
 * **Partial Market Coverage**: Because only the first 10 pages were scraped per session, the dataset may **exclude listings** beyond that range — especially during high-volume weeks.  
 
-* **Sampling Gaps**: The scraping schedule was not continuous, meaning **some job postings may have been missed** between scrapes.
 
-* **Search Inaccuracy**: Seek.com’s keyword-based search can surface jobs that **do not have "Analyst" in the job title**, but include the term in the job description.  
-  --> To maintain scope and relevance, these **non-Analyst-titled roles were filtered out after scraping**.
-
-* **Employer Visibility**: Some employers may be underrepresented if their listings appeared beyond the scraped range or if they used broader or alternate job titles.
-
-* As a result, this analysis should be viewed as an **indicative snapshot of hiring trends**, not a full representation of the Australian job market.  
+* **Misleading keywords**: Seek.com’s keyword-based search can surface jobs that **do not have "Analyst" in the job title**, but include the term in the job description.  
+  --> To maintain scope and relevance, these **non-Analyst-titled roles were filtered out for visualization**.
   
 
 **Column definition:**
