@@ -169,11 +169,6 @@ Most listings had **1–2 inspections**, peaking on weekends. One standout prope
 Only **8%** of inspections were linked to auctions — confirming **private treaty** as the dominant method in this market.
 
 ## Recommendations based on the insights
-Here’s a **recommendations section split into two audiences** — Buyers and Listing Agents — based on your project insights:
-
----
-
-### **Recommendations**
 
 #### **For Buyers**
 
