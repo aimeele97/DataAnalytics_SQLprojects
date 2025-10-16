@@ -168,6 +168,29 @@ Most listings had **1–2 inspections**, peaking on weekends. One standout prope
 
 Only **8%** of inspections were linked to auctions — confirming **private treaty** as the dominant method in this market.
 
+## Recommendations based on the insights
+Here’s a **recommendations section split into two audiences** — Buyers and Listing Agents — based on your project insights:
+
+---
+
+### **Recommendations**
+
+#### **For Buyers**
+
+* **Time Inspections Strategically:** Focus on weekend inspections when market activity is highest to compare multiple options efficiently.
+* **Property Type Awareness:** Prioritize houses, as they dominate market availability and sales, but also explore apartments and townhouses for niche opportunities.
+* **Benchmark Expectations:** Use the 29-day average selling window as a reference for negotiating offers and planning purchase timing.
+* **Private Treaty Advantage:** Consider properties sold via private treaty, as they represent the majority of transactions and may offer faster closure than auctions.
+
+#### **For Listing Agents / Sellers**
+
+* **Optimize Listing Duration:** Aim to sell properties within the 29-day average by aligning pricing, marketing, and inspection schedules.
+* **Highlight Property Type Strengths:** Focus on houses for broader appeal while tailoring strategies for apartments and townhouses.
+* **Schedule Inspections Wisely:** Maximize engagement by promoting viewings during peak weekend activity.
+* **Monitor Buyer Behavior & Pricing:** Track properties with frequent price changes or high inspection counts to adjust strategies and anticipate market interest.
+* **Leverage Private Treaty Sales:** Use private treaty as the preferred method for predictable and timely transactions.
+* **Location-Based Marketing:** Target hotspot areas identified in analysis for higher visibility and engagement.
+
 --- 
 
 ## Final Thoughts
